@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Super Joyful';
+  src: url('fonts/SuperJoyful-lxwPq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-family: 'Super Joyful', system-ui, Arial, sans-serif;
+}
+
+.center {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #111;
+  user-select: none;
+}
+
+#modal.hidden { display: none; }
+
+#modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(90vw - 2rem);
+  max-height: calc(90vh - 2rem);
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
